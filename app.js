@@ -326,28 +326,34 @@ function identifier(type, t1, t2, t3) {
     //obtuse
     if (t1 > 90 || t2 > 90 || t3 > 90) {
       document.getElementById("angles").innerHTML = "Obtuse";
+      document.getElementById("angles").style.color = 'red';
     }
     //right
     else if (t1 == 90 || t2 == 90 || t3 == 90) {
       document.getElementById("angles").innerHTML = "Right";
+      document.getElementById("angles").style.color = 'green';
     }
     //acute
     else if (t1 < 90 || t2 < 90 || t3 < 90) {
       document.getElementById("angles").innerHTML = "Acute";
+      document.getElementById("angles").style.color = 'yellow';
     }
 
   } else if (type == "sides") {
     // equilateral
     if (t1 == t2 && t2 == t3) {
       document.getElementById("sides").innerHTML = "Equilateral";
+      document.getElementById("sides").style.color = 'lime';
     }
     // isosceles
     else if (t1 == t2 || t2 == t3 || t3 == t1) {
       document.getElementById("sides").innerHTML = "Isosceles";
+      document.getElementById("sides").style.color = 'orange';
     }
     //scalene
     else {
       document.getElementById("sides").innerHTML = "Scalene";
+      document.getElementById("sides").style.color = 'purple';
     }
   }
 }
